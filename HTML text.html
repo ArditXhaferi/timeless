@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeless Type</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#FFDE59',
+                        dark: '#111111',
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'serif'],
+                        sans: ['Helvetica', 'Arial', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #111111;
+            color: white;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .number-accent {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            color: #FFDE59;
+        }
+        
+        .btn-accent {
+            background-color: #FFDE59;
+            color: #111111;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-accent:hover {
+            background-color: white;
+            color: #111111;
+        }
+        
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .image-container img {
+            transition: all 0.5s ease;
+        }
+        
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="/placeholder.svg?height=1080&width=1920" alt="Typography background" class="w-full h-full object-cover opacity-50 grayscale">
+        </div>
+        <div class="container mx-auto px-4 py-20 z-10 text-center">
+            <h1 class="text-6xl md:text-8xl font-bold mb-6">Timeless<br><span class="text-accent">Type</span></h1>
+            <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-10">
+                Shfletoni me ne dhe zbuloni mrekullinë e tipografisë dhe trashegiminë e saj të pasur!
+            </p>
+            <a href="#explore" class="btn-accent px-8 py-3 rounded-full text-lg font-bold inline-block">
+                Lexo më shumë
+            </a>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <section id="explore" class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-5xl font-bold mb-8">Magjia në <span class="text-accent">Tipografi</span></h2>
+                    <p class="text-lg mb-6">
+                        Nëpërmjet kësaj faqeje, shfletoni historinë, teknikat dhe evoluimin e tipografisë, 
+                        zbuloni rëndësitë e mjeshtërinë pas secilës shkronjë.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+                        <div class="border border-gray-800 p-6 rounded-lg hover:border-accent transition-all">
+                            <h3 class="text-2xl font-bold mb-4">E Lashtë</h3>
+                            <p>Eksploro historinë e trashëgiminë tonë te tipografisë së lashtë.</p>
+                        </div>
+                        <div class="border border-gray-800 p-6 rounded-lg hover:border-accent transition-all">
+                            <h3 class="text-2xl font-bold mb-4">Kaligrafi</h3>
+                            <p>Mëso mbi kaligrafinë, duke parë teknika për shkronjat e bukura.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container rounded-lg overflow-hidden">
+                    <img src="/placeholder.svg?height=800&width=600" alt="Typography collage" class="w-full h-auto grayscale">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Letterpress Section -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="image-container rounded-lg overflow-hidden order-2 md:order-1">
+                    <img src="/placeholder.svg?height=800&width=600" alt="Letterpress printing blocks" class="w-full h-auto grayscale">
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-5xl font-bold mb-8">Shtypja <span class="text-accent">Manuale</span></h2>
+                    <p class="text-lg mb-6">
+                        Artikulli ynë hedh dritën mbi shtypjen manuale letterpress në kryeqytetin e Kosovës. 
+                        Eksplorojmë pse kjo teknikë ka fituar kaq popullaritet në mes të dizajnerëve në qytet.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#" class="btn-accent px-8 py-3 rounded-full text-lg font-bold inline-block">
+                            Lexo më shumë
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Street Typography Section -->
+    <section class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold mb-12 text-center">Shkronjat në <span class="text-accent">Rrugë</span></h2>
+            <p class="text-xl text-center max-w-3xl mx-auto mb-12">
+                Zgjedhjet tona më të mira për fotografitë e shkronjave në rrugët e qytetit.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div class="image-container rounded-lg overflow-hidden">
+                    <img src="/placeholder.svg?height=600&width=400" alt="Street typography example 1" class="w-full h-auto grayscale">
+                </div>
+                <div class="image-container rounded-lg overflow-hidden">
+                    <img src="/placeholder.svg?height=600&width=400" alt="Street typography example 2" class="w-full h-auto grayscale">
+                </div>
+                <div class="image-container rounded-lg overflow-hidden">
+                    <img src="/placeholder.svg?height=600&width=400" alt="Street typography example 3" class="w-full h-auto grayscale">
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <h3 class="text-3xl font-bold mb-6">Tipografia; Një mënyrë për të shprehur identitetin.</h3>
+                <p class="text-lg max-w-4xl mx-auto">
+                    Këto imazhe kapin shkronjat unike dhe stilizimet e tyre që jetojnë në muret, pllakat, 
+                    e strukturat e qytetit tonë, duke pasqyruar shpirtin dhe karakterin e jetës urbane në Prishtinë.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <div class="bg-black p-8 rounded-lg">
+                    <span class="number-accent text-4xl">02</span>
+                    <h4 class="text-2xl font-bold mt-4 mb-4">Në shtyp</h4>
+                    <p>Dallimi e përparësitë te teknika letterpress dhe ndikimet që i ka.</p>
+                </div>
+                <div class="bg-black p-8 rounded-lg">
+                    <span class="number-accent text-4xl">03</span>
+                    <h4 class="text-2xl font-bold mt-4 mb-4">Në rrugë</h4>
+                    <p>Galeri e fotografive që kapin shkronja që janë në rrugët e Prishtinës.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold mb-12 text-center">Tipografia në <span class="text-accent">Kohë</span></h2>
+            <p class="text-xl text-center max-w-3xl mx-auto mb-16">
+                Tipografia në kohë shqyrton evoluimin e tipografisë përmes epokave e dekadave.
+            </p>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-800"></div>
+                
+                <!-- Timeline items -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- 2020 -->
+                    <div class="md:col-start-2 relative pb-12">
+                        <div class="absolute left-0 md:left-auto md:right-full mr-8 top-0 w-4 h-4 rounded-full bg-accent"></div>
+                        <div class="ml-12 md:ml-0 md:mr-12">
+                            <span class="text-accent font-bold text-xl">2020</span>
+                            <h3 class="text-2xl font-bold mt-2 mb-4">Teknologjia Digjitale</h3>
+                            <p>Në vitin 2020 ka pasur një rritje të përdorimit të teknologjive të shtypjes digjitale si dhe një interesim për dizajnin tipografik modern.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2022 -->
+                    <div class="md:col-start-1 relative pb-12">
+                        <div class="absolute left-0 md:left-auto md:right-0 mr-8 top-0 w-4 h-4 rounded-full bg-accent"></div>
+                        <div class="ml-12 md:ml-0">
+                            <span class="text-accent font-bold text-xl">2022</span>
+                            <h3 class="text-2xl font-bold mt-2 mb-4">Teknika Tradicionale</h3>
+                            <p>Në vitin 2022 ka ndodhur një rritje e përdorimit të teknikave tradicionale, letterpress e kaligrafi, duke e dhënë një anë më autentike në dizajn.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2024 -->
+                    <div class="md:col-start-2 relative">
+                        <div class="absolute left-0 md:left-auto md:right-full mr-8 top-0 w-4 h-4 rounded-full bg-accent"></div>
+                        <div class="ml-12 md:ml-0 md:mr-12">
+                            <span class="text-accent font-bold text-xl">2024</span>
+                            <h3 class="text-2xl font-bold mt-2 mb-4">Ndërthurja e Stileve</h3>
+                            <p>Në vitin 2024, tipografia në Prishtinë ka shënuar një përdorim më të madh të teknologjive inovative platformave të reja të dizajnit gjithashtu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ancient Typography Section -->
+    <section class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-5xl font-bold mb-8">Tipografi <span class="text-accent">e Lashtë</span></h2>
+                    <p class="text-lg mb-6">
+                        Tipografia e lashtë përbën një bazë të shkronjave dhe sistemeve të shkruarit që i kanë formuar kulturat, dhe civilizimet e lashta.
+                    </p>
+                    <p class="text-lg mb-8">
+                        Ka ndikuar thellë te mënyra si shprehim dhe i kuptojmë idetë, historinë e kulturën.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#" class="btn-accent px-8 py-3 rounded-full text-lg font-bold inline-block">
+                            Lexo më shumë
+                        </a>
+                    </div>
+                </div>
+                <div class="image-container rounded-lg overflow-hidden">
+                    <img src="/placeholder.svg?height=800&width=600" alt="Ancient typography examples" class="w-full h-auto grayscale">
+                </div>
+            </div>
+            
+            <div class="mt-20 text-center">
+                <blockquote class="text-3xl md:text-4xl font-serif italic max-w-4xl mx-auto">
+                    <span class="text-accent">"</span>
+                    Tipografia shqiptare është një pasqyrë e identitetit kulturor.
+                    <span class="text-accent">"</span>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Letterpress Workshop Section -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold mb-12 text-center">Letterpress</h2>
+            <p class="text-xl text-center max-w-3xl mx-auto mb-16">
+                Në shekullin e 21-të, letterpress është rikthyer si një mënyrë alternative dhe artizanale
+                për të krijuar punë të shkëlqyera shtypjeje. Ndërsa teknologjia digjitale ka marrë hov,
+                shpesh ndjenja dhe karakteri unik i letterpress e bën atë të dallueshme nga të tjerat.
+            </p>
+            
+            <div class="bg-dark p-8 md:p-12 rounded-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6">Workshopi i Tipografisë</h3>
+                        <p class="text-lg mb-8">
+                            Bashkohu me ne në një workshop të veçantë për tipografi, ku do të eksplorojmë historinë,
+                            teknikat dhe praktikat e dizajnit tipografik.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#" class="btn-accent px-6 py-3 rounded-full font-bold">
+                                Watch Now
+                            </a>
+                            <a href="#" class="border border-white px-6 py-3 rounded-full font-bold hover:bg-white hover:text-black transition-all">
+                                Free Trial
+                            </a>
+                        </div>
+                    </div>
+                    <div class="image-container rounded-lg overflow-hidden">
+                        <img src="/placeholder.svg?height=600&width=800" alt="Typography workshop" class="w-full h-auto grayscale">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calligraphy Section -->
+    <section class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="image-container rounded-lg overflow-hidden order-2 md:order-1">
+                    <img src="/placeholder.svg?height=800&width=600" alt="Calligraphy examples" class="w-full h-auto grayscale">
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-5xl font-bold mb-8">Art dhe <span class="text-accent">Kaligrafi</span></h2>
+                    <p class="text-lg mb-6">
+                        Kaligrafia është më shumë se thjesht shkrimi me llojin e elegancës; është art që di
+                        të kombinoj formën, lëvizje dhe emocion për t'a krijuar shkrimin më të bukur.
+                    </p>
+                    <p class="text-lg mb-8">
+                        Nëpërmjet kaligrafisë, çdo shprehje bëhet më shumë se fjalë.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#" class="btn-accent px-8 py-3 rounded-full text-lg font-bold inline-block">
+                            Lexo më shumë
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script Writing Section -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold mb-12 text-center">Delikatesa dhe <span class="text-accent">Eleganca</span></h2>
+            <p class="text-xl text-center max-w-3xl mx-auto mb-16">
+                Shkrimi script është një formë e kaligrafisë e cila karakterizohet nga shkronjat e rrumbullakëta. Kjo
+                teknikë i jep një ndjesi të veçantë çdo fjalie e fjale, në një tekst duke shtuar një prekje të romantizmit
+                dhe elegancës.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-dark p-8 rounded-lg flex items-center">
+                    <span class="number-accent text-4xl mr-6">01</span>
+                    <p class="text-xl">Teknika dhe stilet e shkrimit</p>
+                </div>
+                <div class="bg-dark p-8 rounded-lg flex items-center">
+                    <span class="number-accent text-4xl mr-6">02</span>
+                    <p class="text-xl">Historia dhe trashegimia e saj</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold mb-12 text-center">Kontakti</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Graphic Design</h3>
+                    <p class="text-xl mb-8">Lorem Ipsum,<br>Dolor Sit Amet.</p>
+                    
+                    <ul class="space-y-3">
+                        <li>2345 6789 0987</li>
+                        <li>2345 6789 0987</li>
+                        <li>2345 6789</li>
+                        <li>lorem@ipsum.com</li>
+                        <li>dolorsitamet.com</li>
+                    </ul>
+                </div>
+                <div class="image-container rounded-lg overflow-hidden">
+                    <img src="/placeholder.svg?height=600&width=800" alt="Contact image" class="w-full h-auto grayscale">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-black border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Timeless Type</h2>
+            <p class="text-gray-400">© 2024 Timeless Type. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
